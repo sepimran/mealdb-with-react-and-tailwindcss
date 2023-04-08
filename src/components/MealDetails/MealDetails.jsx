@@ -1,9 +1,14 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData ,useNavigate} from 'react-router-dom';
 const MealDetails = () => {
     const meal = useLoaderData();
     const {id , title, thumbnailUrl} = meal;
     const dummyImg = 'https://thumbs.dreamstime.com/b/wooden-table-food-top-view-cafe-102532611.jpg';
+
+    const navigate = useNavigate();
+    const handleBack = () =>{
+        navigate(-1)
+    }
 
 
     return (
@@ -19,7 +24,7 @@ const MealDetails = () => {
                     <h1 className='text-3xl font-bold'>{title}</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatibus quisquam aliquam, ipsam officiis ea delectus quidem ut explicabo ratione animi facilis ipsa tempora voluptate eos debitis doloremque iure nostrum rerum obcaecati tenetur inventore magni quod dolor! In quibusdam eligendi doloremque eius sapiente expedita doloribus laborum, velit cupiditate rem quia.</p>
 
-                    <button className='px-[30px] py-[10px] bg-[#3B82F6] font-bold text-white mt-7 rounded-md'>Back</button>
+                    <button onClick={handleBack} className='px-[30px] py-[10px] bg-[#3B82F6] font-bold text-white mt-7 rounded-md'>Back</button>
                 </div>
             </div>
 
