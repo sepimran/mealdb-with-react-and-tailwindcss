@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Meals from './components/Meals/Meals';
 
 const router = createBrowserRouter([
    {
@@ -17,12 +18,22 @@ const router = createBrowserRouter([
       children: [
          {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
          },
          {
             path: '/about',
             element: <div>About page</div>
-         }
+         },
+         {
+            path: '/meals',
+            element: <Meals></Meals>,
+            loader: () => fetch(`https://jsonplaceholder.typicode.com/photos`)
+         },
+         {
+            path: '/meal/:mealId',
+            element: <Meals></Meals>,
+            loader: () => fetch(`https://jsonplaceholder.typicode.com/photos`)
+         },
       ]
    }
 ])
