@@ -1,0 +1,19 @@
+.menu-area ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.menu-area ul li {
+    display: inline-block;
+}
+
+.menu-area ul li a {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+header.header-area .row {
+    align-items: center;
+}
