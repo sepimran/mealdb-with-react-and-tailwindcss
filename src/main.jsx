@@ -9,6 +9,7 @@ import {
 import Home from './components/Home/Home';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Meals from './components/Meals/Meals';
+import MealDetails from './components/MealDetails/MealDetails';
 
 const router = createBrowserRouter([
    {
@@ -31,8 +32,8 @@ const router = createBrowserRouter([
          },
          {
             path: '/meal/:mealId',
-            element: <Meals></Meals>,
-            loader: () => fetch(`https://jsonplaceholder.typicode.com/photos`)
+            element: <MealDetails></MealDetails>,
+            loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/photos/${params.mealId}`)
          },
       ]
    }

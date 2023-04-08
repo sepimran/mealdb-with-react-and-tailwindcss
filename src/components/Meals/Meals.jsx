@@ -8,16 +8,13 @@ const Meals = () => {
     
     return (
         <div>
-             <div className="breadcrumb-area bg-[#FAEDE3] p-[120px]">
+            <div className="breadcrumb-area bg-[#FAEDE3] p-[120px]">
                 <h2 className='text-[80px] font-extrabold text-center'>Meals</h2>
             </div>
 
             <div className="content-area py-[100px]">
                 <div className="container mx-auto text-center">
                    <div className="row grid gap-[20px] grid-cols-4">
-                       {
-                            newMeal.map(meal => console.log(meal))
-                       }
 
                         {
                             newMeal.map(meal => <Meal 
